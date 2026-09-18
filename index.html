@@ -1,22 +1,30 @@
 <!DOCTYPE html>
+<!-- HTML5 document declaration. -->
 <html lang="en">
+<!-- The lang attribute helps browsers and accessibility tools identify the page language. -->
 <head>
+  <!-- Page metadata, responsive settings, title and shared stylesheet. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KASI NIGHT HUB | Home</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+<!-- Visible website content starts here. -->
+<!-- Header and main navigation. -->
 <header>
   <nav class="navbar">
     <a class="logo" href="index.html">KASI <span>NIGHT HUB</span></a>
     
-    <ul class="nav-links">
+    <!-- Navigation links shared across all website pages. -->
+  <ul class="nav-links">
       <li><a class="active" href="index.html">Home</a></li><li><a href="pages/about.html">About</a></li><li><a href="pages/shop.html">Shop</a></li><li><a href="pages/enquiry.html">Enquiry</a></li><li><a href="pages/contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
+<!-- Main content area for this page. -->
 <main>
+  <!-- Homepage hero section: introduces the brand and primary actions. -->
   <section class="hero">
     <div class="hero-content">
       <p class="eyebrow">THE SOUND • THE STYLE • THE CULTURE</p>
@@ -24,21 +32,26 @@
       <p>Music, events and streetwear inspired by Kasi culture and the energy of Amapiano.</p>
       <div class="buttons"><a class="btn" href="pages/enquiry.html">Book Now</a><a class="btn btn-outline" href="pages/shop.html">Shop Clothing</a></div>
     </div>
+    <!-- Responsive brand artwork: mobile and desktop SVG versions are selected here. -->
     <picture class="hero-art">
       <source media="(max-width: 800px)" srcset="assets/kasi-mark-mobile.svg">
       <img src="assets/kasi-mark-wide.svg" alt="KASI NIGHT HUB brand artwork">
     </picture>
   </section>
-  <section class="section">
+  <!-- Reusable content section styled by the shared CSS file. -->
+<section class="section">
     <div class="section-heading"><p class="eyebrow">WHAT WE DO</p><h2>Music. Events. Fashion.</h2></div>
+    <!-- Card grid for grouped website information. -->
     <div class="cards">
       <article class="card"><h3>Music</h3><p>Discover Amapiano releases, DJ sets and the sounds connected to the KASI NIGHT HUB brand.</p></article>
       <article class="card"><h3>Events</h3><p>Follow upcoming entertainment events and make enquiries for DJ and event bookings.</p></article>
       <article class="card"><h3>Streetwear</h3><p>Shop clothing inspired by township culture, modern fashion and the KASI NIGHT HUB identity.</p></article>
     </div>
   </section>
+  <!-- Call-to-action section encouraging visitors to contact the brand. -->
   <section class="cta"><h2>Be part of the movement.</h2><p>Follow the brand, check the latest releases and get in touch with us.</p><a class="btn" href="pages/contact.html">Contact Us</a></section>
 </main>
+<!-- Footer displayed at the bottom of the page. -->
 <footer><p>&copy; 2026 KASI NIGHT HUB. All rights reserved.</p></footer>
 
 </body>
