@@ -1,32 +1,57 @@
+/* =========================================================
+   KASI NIGHT HUB - SHARED RESPONSIVE STYLESHEET
+   This file controls the appearance and responsive layout
+   used by every HTML page in the website.
+   ========================================================= */
 *{box-sizing:border-box;margin:0;padding:0}
+/* Global box sizing, spacing reset and smooth scrolling. */
 html{scroll-behavior:smooth}
+/* Main page background, typography, text colour and overflow control. */
 body{font-family:"Open Sans",Arial,sans-serif;background:#080808;color:#f5f5f5;line-height:1.7;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 img{max-width:100%}
+/* Sticky navigation bar shared by all pages. */
 .navbar{min-height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:#050505;border-bottom:1px solid #222;position:sticky;top:0;z-index:10}
 .logo{font-weight:900;letter-spacing:1px;font-size:1.2rem;white-space:nowrap}.logo span{color:#18a8ff}
+/* Desktop navigation links. Mobile rules later turn this into a dropdown. */
 .nav-links{display:flex;list-style:none;gap:28px}.nav-links a{color:#ccc}.nav-links a:hover,.nav-links .active{color:#18a8ff}
+/* Optional mobile menu button styling. */
 .menu-toggle{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+/* Homepage hero layout with text and responsive brand artwork. */
 .hero{min-height:78vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,460px);gap:45px;align-items:center;padding:70px 7%;background:linear-gradient(90deg,#050505 20%,rgba(5,5,5,.7),rgba(5,5,5,.25)),radial-gradient(circle at 75% 50%,#073a58 0,#080808 45%)}
 .hero-content{max-width:750px}.hero-art{display:block;max-width:460px;margin-left:auto}.hero-art img{display:block;width:100%;height:auto;border-radius:16px}
+/* Small uppercase accent labels used throughout the site. */
 .eyebrow{color:#18a8ff;font-weight:800;letter-spacing:2px;font-size:.78rem}
+/* Responsive hero heading and supporting paragraph. */
 .hero h1{font-size:clamp(2.5rem,7vw,5.5rem);line-height:1.05;margin:18px 0}.hero h1 span{color:#18a8ff}.hero p:not(.eyebrow){font-size:1.15rem;color:#ccc;max-width:650px}
+/* Groups primary and secondary action buttons. */
 .buttons{display:flex;gap:15px;margin-top:28px;flex-wrap:wrap}.btn{display:inline-block;border:1px solid #18a8ff;background:#18a8ff;color:#00101a;padding:11px 22px;border-radius:5px;font-weight:800;cursor:pointer;transition:transform .2s,box-shadow .2s;text-align:center}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(24,168,255,.2)}.btn-outline{background:transparent;color:#fff}.small{padding:7px 13px;font-size:.85rem;margin-top:12px}
-.section{padding:75px 7%;max-width:1250px;margin:auto}.section-heading{margin-bottom:35px}.section h2{font-size:2.2rem;margin-top:8px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card,.info-box,.form-card,.product{background:#101010;border:1px solid #242424;border-radius:10px;padding:28px}.card h3,.product h3{color:#18a8ff;margin-bottom:8px}.card p,.product p,.info-box p{color:#bbb}
+/* Standard content section spacing and width. */
+.section{padding:75px 7%;max-width:1250px;margin:auto}.section-heading{margin-bottom:35px}.section h2{font-size:2.2rem;margin-top:8px}/* Reusable card grid. */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card,.info-box,.form-card,.product{background:#101010;border:1px solid #242424;border-radius:10px;padding:28px}.card h3,.product h3{color:#18a8ff;margin-bottom:8px}.card p,.product p,.info-box p{color:#bbb}
+/* Call-to-action section. */
 .cta{text-align:center;padding:75px 7%;background:#0d2533}.cta h2{font-size:2.2rem;margin-bottom:8px}.cta p{color:#ccc;margin-bottom:22px}
+/* Inner-page title/banner area. */
 .page-banner{text-align:center;padding:80px 7%;background:linear-gradient(120deg,#06121a,#071e2c,#080808)}.page-banner h1{font-size:3rem;margin:8px 0}.page-banner p:not(.eyebrow){color:#ccc}
+/* Two-column content layout. */
 .two-column{display:grid;grid-template-columns:1fr 1fr;gap:45px}.two-column h2{margin:8px 0 18px}.info-box h3{color:#18a8ff;margin-bottom:5px;margin-top:15px}.info-box h3:first-child{margin-top:0}.contact-details{padding:20px 0}
+/* Contact detail rows. */
 .detail{padding:16px 0;border-bottom:1px solid #252525;display:flex;flex-direction:column}.detail strong{color:#18a8ff}
+/* Shared form container and form controls. */
 .form-card{display:flex;flex-direction:column;gap:9px}.form-card label{font-weight:700;margin-top:6px}.form-card input,.form-card textarea,.form-card select{width:100%;padding:12px;background:#080808;border:1px solid #333;border-radius:5px;color:#fff;font:inherit}.form-card input:focus,.form-card textarea:focus,.form-card select:focus{outline:1px solid #18a8ff;border-color:#18a8ff}.form-card.wide{max-width:950px;margin:auto}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.form-grid>div{display:flex;flex-direction:column}.form-message{color:#18a8ff;font-weight:700}
+/* Product grid for the shop page. */
 .products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product-image{height:230px;border-radius:7px;background:linear-gradient(135deg,#111,#06273a);display:flex;align-items:center;justify-content:center;text-align:center;font-size:2rem;font-weight:900;letter-spacing:2px;color:#18a8ff;margin-bottom:20px;overflow:hidden}.product-image img{width:100%;height:100%;object-fit:cover}.product strong{display:block;font-size:1.2rem;margin-top:12px}
+/* Footer shared across the website. */
 footer{text-align:center;padding:28px 7%;border-top:1px solid #222;color:#777;font-size:.9rem}
 
+/* Tablet and smaller laptop adjustments. */
 @media(max-width:1000px){
   .navbar{padding:0 5%}.nav-links{gap:18px}
   .hero{gap:30px;padding:60px 5%}.section{padding:60px 5%}.cta{padding:60px 5%}
   .cards,.products{grid-template-columns:repeat(2,1fr)}
   .two-column{gap:30px}
 }
+/* Mobile/tablet breakpoint: stack layouts and enable compact navigation. */
 @media(max-width:800px){
   .navbar{min-height:68px;padding:0 5%}.menu-toggle{display:block}
   .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#050505;flex-direction:column;padding:20px 5%;gap:0;border-bottom:1px solid #222}
@@ -37,6 +62,7 @@ footer{text-align:center;padding:28px 7%;border-top:1px solid #222;color:#777;fo
   .section{padding:55px 5%}.section h2,.cta h2{font-size:1.9rem}.page-banner{padding:60px 5%}.page-banner h1{font-size:2.3rem}
   .card,.info-box,.form-card,.product{padding:22px}
 }
+/* Small-phone breakpoint: reduce typography and make actions full width. */
 @media(max-width:480px){
   .logo{font-size:1rem}.hero{padding:40px 5% 55px}.hero h1{font-size:clamp(2.2rem,12vw,3.2rem)}
   .eyebrow{font-size:.68rem;letter-spacing:1.5px}.buttons{flex-direction:column;align-items:stretch}.buttons .btn{width:100%}
@@ -44,4 +70,5 @@ footer{text-align:center;padding:28px 7%;border-top:1px solid #222;color:#777;fo
   .cta{padding:50px 5%}.product-image{height:200px;font-size:1.6rem}
   footer{padding:22px 5%}
 }
+/* Keep navigation visible on desktop screens. */
 @media(min-width:801px){.nav-links{display:flex!important}}
