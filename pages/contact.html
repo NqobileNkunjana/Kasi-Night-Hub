@@ -1,53 +1,100 @@
 <!DOCTYPE html>
 <!-- HTML5 document declaration. -->
 <html lang="en">
-<!-- The lang attribute helps browsers and accessibility tools identify the page language. -->
 <head>
-  <!-- Page metadata, responsive settings, title and shared stylesheet. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KASI NIGHT HUB | Contact</title>
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-<!-- Visible website content starts here. -->
-<!-- Header and main navigation. -->
 <header><nav class="navbar">
   <a class="logo" href="../index.html">KASI <span>NIGHT HUB</span></a>
-  
-  <!-- Navigation links shared across all website pages. -->
   <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li><li><a href="about.html">About</a></li>
-    <li><a href="shop.html">Shop</a></li><li><a href="enquiry.html">Enquiry</a></li><li><a class="active" href="contact.html">Contact</a></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="enquiry.html">Enquiry</a></li>
+    <li><a class="active" href="contact.html">Contact</a></li>
   </ul>
 </nav></header>
 
-<!-- Main content area for this page. -->
 <main>
-<!-- Page banner that identifies the current page. -->
-<section class="page-banner"><p class="eyebrow">GET IN TOUCH</p><h1>Contact Us</h1><p>Have a question, booking request or clothing enquiry?</p></section>
+<section class="page-banner">
+  <p class="eyebrow">GET IN TOUCH</p>
+  <h1>Contact Us</h1>
+  <p>Send KASI NIGHT HUB a general message and we will get back to you.</p>
+</section>
 
-<!-- Two-column content section; CSS stacks these columns on smaller screens. -->
 <section class="section two-column">
   <div class="contact-details">
     <h2>Let's talk</h2>
-    <p>Use the details below or send an enquiry through our website.</p>
+    <p>Use the details below or send a message through the form.</p>
     <div class="detail"><strong>Email</strong><span>info@kasinighthub.co.za</span></div>
     <div class="detail"><strong>Website</strong><span>www.kasinighthub.co.za</span></div>
     <div class="detail"><strong>Social Media</strong><span>Follow KASI NIGHT HUB on your preferred platform.</span></div>
   </div>
-  <!-- Contact form: HTML validation is handled with required/type attributes. -->
+
   <form class="form-card" id="contactForm">
-    <label for="name">Name</label><input id="name" type="text" required>
-    <label for="email">Email</label><input id="email" type="email" required>
-    <label for="message">Message</label><textarea id="message" rows="6" required></textarea>
-    <button class="btn" type="submit">Send Message</button>
-    <p class="form-message" id="contactMessage"></p>
+    <label for="name">Full Name</label>
+    <input id="name" name="name" type="text" minlength="2" required>
+
+    <label for="email">Email Address</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="messageType">Message Type</label>
+    <select id="messageType" name="messageType" required>
+      <option value="">Select message type</option>
+      <option value="General Question">General Question</option>
+      <option value="Feedback">Feedback</option>
+      <option value="Booking">Booking</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Partnership">Partnership</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="message">Full Message</label>
+    <textarea id="message" name="message" rows="6" minlength="10" required placeholder="Type your message here..."></textarea>
+
+    <button class="btn" type="submit">Prepare Email</button>
+    <p class="form-message" id="contactMessage" aria-live="polite"></p>
   </form>
 </section>
 </main>
-<!-- Footer displayed at the bottom of the page. -->
+
 <footer><p>&copy; 2026 KASI NIGHT HUB. All rights reserved.</p></footer>
 
+<script>
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  if (!this.checkValidity()) {
+    this.reportValidity();
+    return;
+  }
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const type = document.getElementById("messageType").value;
+  const message = document.getElementById("message").value.trim();
+  const recipient = "info@kasinighthub.co.za";
+
+  const subject = "KASI NIGHT HUB - " + type + " from " + name;
+  const body =
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Message Type: " + type + "\n\n" +
+    "Message:\n" + message;
+
+  const mailto = "mailto:" + recipient +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+
+  document.getElementById("contactMessage").textContent =
+    "Your message has been validated. Your email application will open so you can send it to " + recipient + ".";
+
+  window.location.href = mailto;
+});
+</script>
 </body>
 </html>
