@@ -38,11 +38,11 @@
   <div class="form-grid">
     <div>
       <label for="fullName">Full Name</label>
-      <input id="fullName" name="fullName" type="text" minlength="2" required>
+      <input id="fullName" name="fullName" type="text" autocomplete="name" minlength="2" maxlength="80" required>
     </div>
     <div>
       <label for="email">Email Address</label>
-      <input id="email" name="email" type="email" required>
+      <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
     </div>
     <div>
       <label for="service">Enquiry Type</label>
@@ -62,7 +62,7 @@
   </div>
 
   <label for="details">Details</label>
-  <textarea id="details" name="details" rows="7" minlength="10" placeholder="Tell us about your booking or enquiry..." required></textarea>
+  <textarea id="details" name="details" rows="7" minlength="10" maxlength="2000" placeholder="Tell us about your booking or enquiry..." required></textarea>
 
   <button class="btn" type="submit">Submit Enquiry</button>
   <p class="form-message" id="enquiryMessage" aria-live="polite"></p>
