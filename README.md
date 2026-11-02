@@ -26,6 +26,7 @@ KASI NIGHT HUB is a multi-page static website for a South African entertainment 
 - `assets/kasi-mark-mobile.svg` and `assets/kasi-mark-wide.svg` — responsive brand artwork
 - `.github/workflows/pages.yml` — GitHub Pages deployment workflow
 - `sitemap.md` and `sitemap.xml` — website page structure and sitemap
+- `WIREFRAMES.md` — desktop and mobile low-fidelity page wireframes
 - `CHANGELOG.md` — development changes
 - `TESTING.md` — test plan and evidence log
 - `REFERENCES.md` — technical references
@@ -37,8 +38,8 @@ The following record is based on the lecturer's Formative 1 Part 1 feedback date
 
 | Lecturer feedback | Improvement / current status |
 |---|---|
-| Wireframes must be neatly designed (0/2) | Proposal-document item. Review and replace/refine the wireframes in the POE document; this cannot be verified from the website source alone. |
-| Timeline must align with semester weeks and POE deadlines (1/2) | Proposal-document item. Check the timeline against the official semester schedule and POE deadlines. |
+| Wireframes must be neatly designed (0/2) | Added desktop and mobile low-fidelity wireframes in `WIREFRAMES.md` based on the current website. Insert/export them into the POE in the format required by the lecturer. |
+| Timeline must align with semester weeks and POE deadlines (1/2) | Still outstanding in the POE document. The official semester week numbers and POE deadlines were not provided, so a timeline has not been invented. |
 | Improve academic writing (3/5) | Proposal-document item. Proofread the proposal for formal academic wording, grammar and clarity. |
 | No strong evidence of research (6.5/10) | Research and sourcing must be strengthened in the POE document, with relevant evidence and in-text citations. |
 | Provide a clearly designed sitemap (0/5) | Added `sitemap.md` and `sitemap.xml` to document the website hierarchy and page URLs. |
