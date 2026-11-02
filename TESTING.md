@@ -34,3 +34,26 @@ This file is a test plan and evidence log. Do not mark a test as passed until it
 
 ## Important form limitation
 The website is static. The forms prepare an email draft; they do not send or store submissions automatically. The visitor must send the email from their own email application. A real server-side form handler would be required for automatic submission processing.
+
+
+## Source-level audit — 2 November 2026
+
+The following checks were completed by reviewing the files in the GitHub repository. These checks are not a substitute for browser testing.
+
+- [x] Confirmed the five main HTML pages exist: Home, About, Shop, Enquiry and Contact.
+- [x] Confirmed each main page references the shared stylesheet and shared JavaScript using paths appropriate to its folder.
+- [x] Confirmed the main navigation points to the five existing page files.
+- [x] Confirmed the 404 page now references `assets/css/styles.css`.
+- [x] Confirmed the mobile navigation button and matching navigation list are present on all five main pages.
+- [x] Confirmed contact and enquiry forms have labels, required fields and live feedback regions in the HTML source.
+- [x] Confirmed the sitemap lists the five current page URLs.
+- [x] Removed two duplicate GitHub Pages workflows so only `.github/workflows/pages.yml` remains active.
+- [x] Added comments explaining the main structure of the Enquiry and Contact pages.
+- [ ] Open each page in a browser at desktop, tablet and mobile widths.
+- [ ] Submit valid and invalid sample form values and inspect the generated email drafts.
+- [ ] Check the browser console and network requests for errors.
+- [ ] Confirm the latest GitHub Pages deployment completes successfully and the live site reflects the latest commit.
+- [ ] Capture genuine desktop and mobile screenshots for the POE evidence if required.
+
+## Deployment workflow
+Only `.github/workflows/pages.yml` is retained as the GitHub Pages deployment workflow. Older duplicate Jekyll and static deployment workflows were removed to prevent competing deployments. Check the latest run in the [GitHub Actions tab](https://github.com/NqobileNkunjana/Kasi-Night-Hub/actions).
