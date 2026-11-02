@@ -1,54 +1,47 @@
 # KASI NIGHT HUB Website
 
-**WEDE5020 — Formative 2 Part 2**
+**WEDE5020 — POE Part 3 working branch**
 
-KASI NIGHT HUB is a multi-page static website for an entertainment and lifestyle brand focused on Amapiano music, events and streetwear.
+KASI NIGHT HUB is a multi-page static website for a South African entertainment and lifestyle brand focused on Amapiano music, events and Kasi-inspired streetwear.
 
-## Pages
-- Home — index.html
-- About — about.html
-- Shop — shop.html
-- Enquiry — enquiry.html
-- Contact — contact.html
+## Website pages
+- Home — `index.html`
+- About — `pages/about.html`
+- Shop — `pages/shop.html`
+- Enquiry — `pages/enquiry.html`
+- Contact — `pages/contact.html`
 
 ## Technologies
-HTML5, CSS3 and JavaScript.
-
-## Part 2 implementation
-The project includes an external stylesheet on all pages, responsive layouts, responsive typography, responsive navigation, responsive artwork, hover/focus pseudo-classes, JavaScript form feedback, a README, changelog, testing evidence, references and GitHub Pages deployment configuration.
+HTML5, CSS3 and vanilla JavaScript. The website is static and is configured for GitHub Pages.
 
 ## Repository structure
-- css/style.css — shared styling
-- js/script.js — mobile navigation and prototype form feedback
-- assets/ — responsive KASI NIGHT HUB artwork
-- .github/workflows/pages.yml — GitHub Pages deployment workflow
-- CHANGELOG.md — Part 1 continuity and Part 2 changes
-- TESTING.md — implementation checks and browser test procedure
-- REFERENCES.md — technical references
-- SUBMISSION_LINKS.md — final repository and deployment links
+- `assets/css/styles.css` — shared responsive styling and accessibility focus states
+- `assets/js/script.js` — mobile navigation, preferred-date limits, form validation and email-draft preparation
+- `assets/kasi-mark-mobile.svg` and `assets/kasi-mark-wide.svg` — responsive brand artwork
+- `pages/` — About, Shop, Enquiry and Contact pages
+- `.github/workflows/pages.yml` — GitHub Pages deployment workflow
+- `CHANGELOG.md` — changes made during the project
+- `TESTING.md` — test procedure and results to record
+- `REFERENCES.md` — technical references
+- `SUBMISSION_LINKS.md` — repository and expected live-site links
+
+## Part 3 improvements in this branch
+- Added an accessible mobile navigation button with `aria-expanded`, keyboard Escape support and close-on-navigation behaviour.
+- Moved the contact and enquiry form behaviour into the shared external JavaScript file.
+- Added page-specific meta descriptions, theme colour and Open Graph title/description metadata.
+- Improved form validation to reject text fields containing only spaces, added length limits and autocomplete hints, and prevented past preferred dates.
+- Forms prepare a pre-filled email draft for `info@kasinighthub.co.za`. The visitor must open their email application and send the message. The static website does not send or store form submissions automatically.
+- Added visible keyboard-focus styling and reduced-motion support while retaining the existing black, white and electric-blue design.
+
+## Testing before submission
+Follow the steps in `TESTING.md`. Test the desktop and mobile layouts, all five navigation destinations, both forms, the generated email links and the deployed GitHub Pages URL. Only mark tests as passed after running them in a browser and record screenshots if required by the POE brief.
 
 ## Deployment
-The repository is configured for GitHub Pages through GitHub Actions. Enable **Settings → Pages → Build and deployment → Source → GitHub Actions**, then verify the live site before submission.
+The repository contains a GitHub Actions workflow for GitHub Pages. The expected project URL is:
 
-Expected project URL: https://nqobilenkunjana.github.io/Kasi-Night-Hub/
+https://nqobilenkunjana.github.io/Kasi-Night-Hub/
 
-## Part 2 checklist mapping
-- Part 1 feedback and changelog — CHANGELOG.md
-- External stylesheet — css/style.css linked from all HTML pages
-- Default CSS styles — global reset and base styles
-- Typography — shared font, headings and responsive sizing
-- Layout structure — grid and flexible sections
-- Decoration and colour — black, white and electric-blue theme
-- Pseudo-classes — hover and focus states
-- Media queries / breakpoints — 800px breakpoint
-- Responsive layout — grids stack on smaller screens
-- Responsive typography — clamp() and mobile heading sizes
-- Responsive navigation — mobile menu toggle
-- Responsive images — picture/source and width:100% artwork
-- Descriptive documentation — changelog and README
-- Testing evidence — TESTING.md
-- References — REFERENCES.md
-- Final submission links — SUBMISSION_LINKS.md
+Verify **Settings → Pages → Build and deployment → Source → GitHub Actions**, then check the live website after changes are merged into `main`.
 
-## Part 1 feedback note
-No separate Part 1 lecturer feedback was present in the repository when Part 2 documentation was prepared, so this README does not invent feedback or claim changes that cannot be verified.
+## Part 1 feedback
+No separate Part 1 lecturer feedback was present in the repository when the earlier documentation was prepared. Add the lecturer's actual feedback and the corresponding corrections here if that feedback is available; do not invent feedback.
