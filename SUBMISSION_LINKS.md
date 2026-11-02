@@ -7,17 +7,22 @@ https://github.com/NqobileNkunjana/Kasi-Night-Hub
 Expected GitHub Pages project URL:
 https://nqobilenkunjana.github.io/Kasi-Night-Hub/
 
-The repository uses a GitHub Actions workflow. Confirm **Settings → Pages → Build and deployment → Source → GitHub Actions**, then wait for the deployment workflow to finish and test the live URL.
+The repository uses one GitHub Actions deployment workflow: `.github/workflows/pages.yml`. Duplicate Jekyll and static deployment workflows were removed. Confirm that the latest run in the [GitHub Actions tab](https://github.com/NqobileNkunjana/Kasi-Night-Hub/actions) completes successfully before relying on the live link.
 
 ## Part 3 handover checklist
 - [x] Public GitHub repository and website source files
 - [x] Responsive multi-page website and shared CSS
 - [x] Shared JavaScript for mobile navigation and form email-draft preparation
 - [x] Unique page meta descriptions and Open Graph metadata
-- [x] README, changelog, references and testing plan updated
-- [ ] Lecturer Part 2 feedback checked and every required correction documented
+- [x] README documents website configuration, folder structure, feedback record and references
+- [x] Readable sitemap and XML sitemap added
+- [x] Part 1 feedback recorded with proposal-stage tasks clearly identified
+- [x] 404 page stylesheet path corrected
+- [x] Duplicate deployment workflows removed; one Pages workflow remains
+- [ ] Lecturer Part 2 feedback fully addressed (images were intentionally left out; possible rubric deduction remains)
+- [ ] Proposal wireframes, semester-aligned timeline, academic writing and research checked in the POE document
 - [ ] Browser tests completed and evidence/screenshots recorded where required
-- [ ] Live deployment opened and checked after merging to `main`
+- [ ] Latest GitHub Pages deployment completed and live site checked
 - [ ] Final repository and live-site links submitted through the LMS
 
 ## Form behaviour note
