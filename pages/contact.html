@@ -44,10 +44,10 @@
 
   <form class="form-card" id="contactForm">
     <label for="name">Full Name</label>
-    <input id="name" name="name" type="text" minlength="2" required>
+    <input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required>
 
     <label for="email">Email Address</label>
-    <input id="email" name="email" type="email" required>
+    <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
 
     <label for="messageType">Message Type</label>
     <select id="messageType" name="messageType" required>
@@ -61,7 +61,7 @@
     </select>
 
     <label for="message">Full Message</label>
-    <textarea id="message" name="message" rows="6" minlength="10" required placeholder="Type your message here..."></textarea>
+    <textarea id="message" name="message" rows="6" minlength="10" maxlength="2000" required placeholder="Type your message here..."></textarea>
 
     <button class="btn" type="submit">Prepare Email</button>
     <p class="form-message" id="contactMessage" aria-live="polite"></p>
