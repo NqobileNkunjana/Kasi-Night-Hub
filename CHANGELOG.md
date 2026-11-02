@@ -29,3 +29,11 @@
 - Added unique meta descriptions, theme colour and Open Graph title/description metadata to each page.
 - Corrected the README to reflect the actual `assets/css/styles.css` and `assets/js/script.js` paths.
 - Updated testing guidance. Browser checks and deployment verification must still be completed before final submission.
+
+
+## Final repository audit — 2 November 2026
+- Removed duplicate Jekyll and static GitHub Pages workflows, leaving one deployment workflow to avoid competing deployments.
+- Added descriptive HTML comments to the Enquiry and Contact pages.
+- Formatted the technical references in IEEE-style numbered format.
+- Added a source-level audit checklist and outstanding browser/deployment checks to `TESTING.md`.
+- Updated the submission handover checklist to distinguish completed repository changes from outstanding POE document and browser evidence.
