@@ -72,3 +72,24 @@ footer{text-align:center;padding:28px 7%;border-top:1px solid #222;color:#777;fo
 }
 /* Keep navigation visible on desktop screens. */
 @media(min-width:801px){.nav-links{display:flex!important}}
+
+
+/* Part 3 accessibility and form feedback improvements. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #18a8ff;
+  outline-offset: 3px;
+}
+.menu-toggle{border-radius:5px;padding:4px 9px;line-height:1.2}
+.menu-toggle:hover{color:#18a8ff}
+.email-action{color:#18a8ff;text-decoration:underline;font-weight:800}
+.email-action:hover{color:#fff}
+.form-note{display:block;color:#bbb;font-size:.9rem;font-weight:400;margin-top:8px}
+.form-message:empty{display:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
