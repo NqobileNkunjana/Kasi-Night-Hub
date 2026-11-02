@@ -5,16 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KASI NIGHT HUB | Enquiry</title>
+  <meta name="description" content="Contact KASI NIGHT HUB about DJ bookings, events, clothing, volunteering and sponsorship opportunities.">
+  <meta name="theme-color" content="#080808">
+  <meta property="og:site_name" content="KASI NIGHT HUB">
+  <meta property="og:title" content="KASI NIGHT HUB | Enquiry">
+  <meta property="og:description" content="Contact KASI NIGHT HUB about DJ bookings, events, clothing, volunteering and sponsorship opportunities.">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 <header><nav class="navbar">
   <a class="logo" href="../index.html">KASI <span>NIGHT HUB</span></a>
-  <ul class="nav-links">
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="primary-navigation">
     <li><a href="../index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="shop.html">Shop</a></li>
-    <li><a class="active" href="enquiry.html">Enquiry</a></li>
+    <li><a class="active" aria-current="page" href="enquiry.html">Enquiry</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav></header>
@@ -65,39 +72,6 @@
 
 <footer><p>&copy; 2026 KASI NIGHT HUB. All rights reserved.</p></footer>
 
-<script>
-document.getElementById("enquiryForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  if (!this.checkValidity()) {
-    this.reportValidity();
-    return;
-  }
-
-  const name = document.getElementById("fullName").value.trim();
-  const service = document.getElementById("service").value;
-  const date = document.getElementById("date").value;
-  const message = document.getElementById("enquiryMessage");
-
-  let response = "";
-
-  if (service === "DJ Booking") {
-    response = "DJ bookings are available from R2,500, depending on the event, location and duration.";
-  } else if (service === "Event Enquiry") {
-    response = "Event enquiries are subject to date and venue availability. We will confirm the details and provide a quotation.";
-  } else if (service === "Clothing Enquiry") {
-    response = "Clothing availability depends on the item and size. We will confirm stock and the current price with you.";
-  } else if (service === "Volunteer") {
-    response = "Thank you for your interest in volunteering. We will review your enquiry and contact you about available opportunities.";
-  } else if (service === "Sponsor") {
-    response = "Thank you for your sponsorship interest. We will contact you with available sponsorship options and packages.";
-  }
-
-  const dateText = date ? " Your preferred date is " + new Date(date + "T00:00:00").toLocaleDateString("en-ZA") + "." : "";
-
-  message.textContent = "Thank you, " + name + "! " + response + dateText + " We will get back to you at " + document.getElementById("email").value + ".";
-  this.reset();
-});
-</script>
+  <script src="../assets/js/script.js" defer></script>
 </body>
 </html>
