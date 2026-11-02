@@ -16,11 +16,12 @@ The repository uses one GitHub Actions deployment workflow: `.github/workflows/p
 - [x] Unique page meta descriptions and Open Graph metadata
 - [x] README documents website configuration, folder structure, feedback record and references
 - [x] Readable sitemap and XML sitemap added
+- [x] Desktop and mobile low-fidelity wireframes documented in `WIREFRAMES.md`
 - [x] Part 1 feedback recorded with proposal-stage tasks clearly identified
 - [x] 404 page stylesheet path corrected
 - [x] Duplicate deployment workflows removed; one Pages workflow remains
 - [ ] Lecturer Part 2 feedback fully addressed (images were intentionally left out; possible rubric deduction remains)
-- [ ] Proposal wireframes, semester-aligned timeline, academic writing and research checked in the POE document
+- [ ] Wireframes inserted into the POE in the lecturer's required format; semester-aligned timeline, academic writing and research checked in the POE document
 - [ ] Browser tests completed and evidence/screenshots recorded where required
 - [ ] Latest GitHub Pages deployment completed and live site checked
 - [ ] Final repository and live-site links submitted through the LMS
