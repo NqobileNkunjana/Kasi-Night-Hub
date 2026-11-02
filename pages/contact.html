@@ -5,17 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KASI NIGHT HUB | Contact</title>
+  <meta name="description" content="Get in touch with KASI NIGHT HUB for general questions, feedback, bookings, clothing enquiries and partnerships.">
+  <meta name="theme-color" content="#080808">
+  <meta property="og:site_name" content="KASI NIGHT HUB">
+  <meta property="og:title" content="KASI NIGHT HUB | Contact">
+  <meta property="og:description" content="Get in touch with KASI NIGHT HUB for general questions, feedback, bookings, clothing enquiries and partnerships.">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 <header><nav class="navbar">
   <a class="logo" href="../index.html">KASI <span>NIGHT HUB</span></a>
-  <ul class="nav-links">
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="primary-navigation">
     <li><a href="../index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="shop.html">Shop</a></li>
     <li><a href="enquiry.html">Enquiry</a></li>
-    <li><a class="active" href="contact.html">Contact</a></li>
+    <li><a class="active" aria-current="page" href="contact.html">Contact</a></li>
   </ul>
 </nav></header>
 
@@ -64,37 +71,6 @@
 
 <footer><p>&copy; 2026 KASI NIGHT HUB. All rights reserved.</p></footer>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  if (!this.checkValidity()) {
-    this.reportValidity();
-    return;
-  }
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const type = document.getElementById("messageType").value;
-  const message = document.getElementById("message").value.trim();
-  const recipient = "info@kasinighthub.co.za";
-
-  const subject = "KASI NIGHT HUB - " + type + " from " + name;
-  const body =
-    "Name: " + name + "\n" +
-    "Email: " + email + "\n" +
-    "Message Type: " + type + "\n\n" +
-    "Message:\n" + message;
-
-  const mailto = "mailto:" + recipient +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body);
-
-  document.getElementById("contactMessage").textContent =
-    "Your message has been validated. Your email application will open so you can send it to " + recipient + ".";
-
-  window.location.href = mailto;
-});
-</script>
+  <script src="../assets/js/script.js" defer></script>
 </body>
 </html>
