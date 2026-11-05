@@ -11,6 +11,9 @@
   <meta property="og:title" content="KASI NIGHT HUB | Contact">
   <meta property="og:description" content="Get in touch with KASI NIGHT HUB for general questions, feedback, bookings, clothing enquiries and partnerships.">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://nqobilenkunjana.github.io/Kasi-Night-Hub/pages/contact.html">
+  <meta property="og:url" content="https://nqobilenkunjana.github.io/Kasi-Night-Hub/pages/contact.html">
+  <link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
@@ -72,11 +75,19 @@
     <p class="form-message" id="contactMessage" aria-live="polite"></p>
   </form>
 </section>
+
+<!-- Interactive map built with Leaflet (vendored in assets/vendor/leaflet) and OpenStreetMap tiles. -->
+<section class="section map-section">
+  <div class="section-heading"><p class="eyebrow">FIND US</p><h2>Based in Gqeberha</h2></div>
+  <div id="map" class="map" role="region" aria-label="Map showing the KASI NIGHT HUB area in Gqeberha, Eastern Cape"></div>
+  <p class="map-note">Map data &copy; OpenStreetMap contributors. Pin shows the general Gqeberha area, not a street address.</p>
+</section>
 </main>
 
 <!-- Shared footer and external JavaScript file. -->
 <footer><p>&copy; 2026 KASI NIGHT HUB. All rights reserved.</p></footer>
 
+  <script src="../assets/vendor/leaflet/leaflet.js" defer></script>
   <script src="../assets/js/script.js" defer></script>
 </body>
 </html>
