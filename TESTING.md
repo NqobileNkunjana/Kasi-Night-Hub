@@ -21,6 +21,26 @@ This file is a test plan and evidence log. Do not mark a test as passed until it
 | Responsive layout | Test at desktop, tablet and mobile widths. | Cards and forms stack appropriately; no horizontal overflow. | Not yet browser-verified |
 | Live deployment | Open the published GitHub Pages URL after merging to `main`. | Latest pages load and assets/scripts return successfully. | Not yet verified |
 
+## Automated browser checks (headless Chromium, local server, 5 November 2026)
+These were run with Playwright against the site served locally. They are **not** a replacement for testing the live GitHub Pages site or real phones.
+
+| Check | Result |
+|---|---|
+| Shop loads 6 products from `data/products.json` | Passed |
+| Search "hoodie" returns 2 products; a nonsense word shows the empty message | Passed |
+| Category filter "Caps" returns 2 products; Reset restores all 6 | Passed |
+| Sort price low-to-high and high-to-low changes the first product | Passed |
+| Lightbox opens with the correct title and image, and Escape closes it | Passed |
+| All product images load | Passed |
+| FAQ accordion opens and closes | Passed |
+| Enquiry form builds a `mailto:` link with the entered details and stays on the page | Passed |
+| Contact map initialises with one marker (map tiles need internet and were not checked) | Passed |
+| Scroll-reveal cards become visible | Passed |
+| No horizontal scrolling at 390px wide on the Shop page | Passed |
+| No JavaScript errors in the console | Passed |
+
+Still to do by hand: all pages on a real phone, map tiles on the live site, the 404 page on the live site, the generated email link in a real email app, and screenshots for the submission.
+
 ## Manual browser procedure
 1. Open Home, About, Shop, Enquiry and Contact.
 2. Use the navigation on desktop, then repeat at a mobile viewport.

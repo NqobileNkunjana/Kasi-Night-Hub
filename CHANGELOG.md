@@ -14,7 +14,7 @@
 - Added GitHub Pages deployment workflow.
 - Added responsive brand artwork and a custom 404 page.
 
-## Part 3 — 2 November 2026 (working branch)
+## Part 3 — 2 November 2026
 ### Navigation and accessibility
 - Added an accessible mobile navigation toggle to all five pages.
 - Added keyboard Escape support, close-on-navigation behaviour and expanded-state announcements.
@@ -39,3 +39,23 @@
 - Updated the submission handover checklist to distinguish completed repository changes from outstanding POE document and browser evidence.
 
 - Added desktop and mobile low-fidelity wireframes in `WIREFRAMES.md` based on the current five-page website.
+
+
+## Part 3 — features and fixes added 5 November 2026
+
+### Issues identified and the fix for each
+| Issue | Change made | Reason |
+|---|---|---|
+| The shop showed text boxes instead of product images | Added product artwork in `assets/images/products/` with descriptive alt text | Visitors need to see what is for sale; alt text supports accessibility and SEO |
+| JavaScript only handled the menu and forms | Added the interactive features listed below | Part 3 requires meaningful, working JavaScript |
+| Forms had no `action` attribute | Added `action="mailto:info@kasinighthub.co.za"` to both forms; JavaScript still validates and prepares the draft | The form destination is now declared in the HTML as well as in the script |
+| `404.html` used a relative stylesheet path, which breaks when a missing URL is inside `pages/` | Switched to project-absolute paths and added `noindex` | GitHub Pages serves the same 404 file for every missing URL |
+| Pages had no canonical URLs or robots file | Added canonical and `og:url` tags and `robots.txt` that points to the sitemap | Helps search engines index the correct URLs |
+
+### New JavaScript features (`assets/js/script.js`)
+- **Dynamic content:** the shop loads `data/products.json` with `fetch` and builds the product cards in the page.
+- **Search, filter and sort:** live text search, category filter and price/name sorting, with a result count and an empty-state message.
+- **Image lightbox:** a native `<dialog>` that shows a larger product image; closes with the button, Escape or a click on the backdrop and returns focus.
+- **Interactive map:** a Leaflet map on the Contact page, included locally in `assets/vendor/leaflet/` (Leaflet 1.9.4, BSD-2-Clause) with OpenStreetMap tiles.
+- **FAQ accordion:** four questions on the Enquiry page using `aria-expanded` buttons.
+- **Scroll-reveal animation:** cards fade in as they enter the screen; switched off when the visitor prefers reduced motion.
