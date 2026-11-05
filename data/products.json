@@ -1,0 +1,56 @@
+[
+  {
+    "id": "tshirt-black",
+    "name": "Signature T-Shirt (Black)",
+    "category": "T-Shirts",
+    "price": 350,
+    "description": "Classic KASI NIGHT HUB streetwear tee in black with the brand name on the chest.",
+    "image": "assets/images/products/tshirt-signature-black.svg",
+    "alt": "Black KASI NIGHT HUB T-shirt with the brand name on the chest"
+  },
+  {
+    "id": "tshirt-blue",
+    "name": "Signature T-Shirt (Electric Blue)",
+    "category": "T-Shirts",
+    "price": 350,
+    "description": "The signature tee in electric blue, matching the KASI NIGHT HUB brand colour.",
+    "image": "assets/images/products/tshirt-signature-electric-blue.svg",
+    "alt": "Electric blue KASI NIGHT HUB T-shirt with the brand name on the chest"
+  },
+  {
+    "id": "hoodie-black",
+    "name": "Signature Hoodie (Black)",
+    "category": "Hoodies",
+    "price": 650,
+    "description": "Comfortable black hoodie with the brand identity across the chest.",
+    "image": "assets/images/products/hoodie-signature-black.svg",
+    "alt": "Black KASI NIGHT HUB hoodie with a hood and the brand name on the chest"
+  },
+  {
+    "id": "hoodie-blue",
+    "name": "Signature Hoodie (Electric Blue)",
+    "category": "Hoodies",
+    "price": 650,
+    "description": "The signature hoodie in electric blue for cooler Kasi nights.",
+    "image": "assets/images/products/hoodie-signature-electric-blue.svg",
+    "alt": "Electric blue KASI NIGHT HUB hoodie with a hood and the brand name on the chest"
+  },
+  {
+    "id": "cap-black",
+    "name": "W_S Cap (Black)",
+    "category": "Caps",
+    "price": 300,
+    "description": "A simple black cap inspired by the W_S identity.",
+    "image": "assets/images/products/cap-ws-black.svg",
+    "alt": "Black cap with the W_S mark on the front"
+  },
+  {
+    "id": "cap-blue",
+    "name": "W_S Cap (Electric Blue)",
+    "category": "Caps",
+    "price": 300,
+    "description": "The W_S cap in electric blue.",
+    "image": "assets/images/products/cap-ws-electric-blue.svg",
+    "alt": "Electric blue cap with the W_S mark on the front"
+  }
+]

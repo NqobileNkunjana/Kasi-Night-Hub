@@ -93,3 +93,34 @@ textarea:focus-visible {
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* Part 3: shop tools, product images, lightbox, map, accordion and reveal animation. */
+.shop-tools{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:16px;align-items:end;margin-bottom:18px}
+.shop-tools label{display:block;font-weight:700;margin-bottom:6px}
+.shop-tools input,.shop-tools select{width:100%;height:48px;padding:0 12px;background:#101010;border:1px solid #333;border-radius:5px;color:#fff;font:inherit}
+.shop-tools .btn{margin:0 0 2px}
+.shop-count{color:#bbb;margin-bottom:18px}
+.shop-empty{color:#ccc;padding:30px 0}
+button.product-image{width:100%;border:0;padding:0;cursor:zoom-in;font:inherit;position:relative}
+button.product-image::after{content:"Tap to enlarge";position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.7);color:#fff;font-size:.72rem;padding:3px 8px;border-radius:4px}
+button.product-image:hover img{transform:scale(1.04)}
+.product-image img{transition:transform .3s}
+.product-tag{display:inline-block;color:#18a8ff;font-size:.72rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px}
+.lightbox{border:1px solid #18a8ff;border-radius:12px;background:#0b0b0b;color:#f5f5f5;padding:0;max-width:min(92vw,620px);width:100%;margin:auto;overflow:hidden}
+.lightbox::backdrop{background:rgba(0,0,0,.82)}
+.lightbox img{display:block;width:100%;height:auto;max-height:65vh;object-fit:contain;background:#080808}
+.lightbox-caption{padding:18px 22px 22px}.lightbox-caption h2{font-size:1.3rem;color:#18a8ff}.lightbox-caption p{color:#ccc;margin:6px 0 4px}
+.lightbox-close{position:absolute;top:8px;right:10px;z-index:2;width:42px;height:42px;border-radius:50%;border:1px solid #18a8ff;background:rgba(0,0,0,.75);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+.map-section{padding-top:20px}
+.map{height:380px;border:1px solid #242424;border-radius:10px;background:#101010;color:#ccc;padding:0;z-index:1}
+.map-note{color:#999;font-size:.85rem;margin-top:10px}
+.accordion h3{margin:0}
+.accordion-trigger{width:100%;text-align:left;background:#101010;color:#fff;border:1px solid #242424;border-radius:8px;padding:16px 50px 16px 18px;margin-top:10px;font:inherit;font-weight:700;cursor:pointer;position:relative}
+.accordion-trigger::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);color:#18a8ff;font-size:1.4rem}
+.accordion-trigger[aria-expanded="true"]{border-color:#18a8ff;color:#18a8ff}
+.accordion-trigger[aria-expanded="true"]::after{content:"\2212"}
+.accordion-panel{background:#0d0d0d;border:1px solid #242424;border-top:0;border-radius:0 0 8px 8px;padding:14px 18px;color:#ccc}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s ease var(--delay,0ms),transform .5s ease var(--delay,0ms)}
+.js .reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){.shop-tools{grid-template-columns:1fr 1fr}.shop-tools>div:first-child{grid-column:1/-1}.map{height:300px}}
+@media(max-width:480px){.shop-tools{grid-template-columns:1fr}}
